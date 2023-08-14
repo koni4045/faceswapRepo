@@ -81,14 +81,10 @@
     <div class="page-header">
         <h1>Face Swap with InsightFace</h1>
     </div>
-    <form action="/imageDisplay" method="POST" enctype="multipart/form-data">
+    <form action="/face_detect_and_select" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="source">Image with Source Face</label>
             <input type="file" id="source" name="source">
-        </div>
-        <div class="form-group">
-            <label for="target">Target Image</label>
-            <input type="file" id="target" name="target">
         </div>
         <button type="submit">Submit</button>
     </form>

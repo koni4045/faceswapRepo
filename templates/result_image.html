@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Vertically center images within container */
+            max-width: 100%;
+            max-height: 80vh; /* Adjusted height to make room for the form */
+            overflow: hidden;
+            margin: 20px auto;
+        }
+
+        .image-container img {
+            max-width: 50%; /* Adjust the width as needed */
+            max-height: 50%; /* Adjust the height as needed */
+            object-fit: contain; /* Maintain aspect ratio and fit within container */
+            margin: 0 10px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="{{ url_for('uploaded_file', filename=target_path) }}" alt="Image">
+        <img src="{{ url_for('uploaded_file', filename=image_filename) }}" alt="Image">
+    </div>
+    <form action="/" method="GET">
+        <button type="submit" value="submit">Home</button>
+    </form>
+</body>
+</html>
